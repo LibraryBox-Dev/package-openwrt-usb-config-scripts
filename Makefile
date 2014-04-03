@@ -55,6 +55,10 @@ define Package/usb-config-scripts-librarybox/postinst
 	ln -s ../modules.available/61_librarybox_shoutbox.sh $$PKG_ROOT/opt/autocfg/modules.enabled
 	#- default piratebox
 	ln -s ../modules.available/50_piratebox_hostname.sh $$PKG_ROOT/opt/autocfg/modules.enabled
+        #- PirateBox mesh functionality
+	ln -s ../modules.available/51_openwrt_node_ip.sh  $$PKG_ROOT/opt/autocfg/modules.enabled
+	ln -s ../modules.available/51_piratebox_node_ip.sh  $$PKG_ROOT/opt/autocfg/modules.enabled
+	ln -s ../modules.available/52_piratebox_node_name.sh  $$PKG_ROOT/opt/autocfg/modules.enabled
 endef
 
 define Build/Compile
